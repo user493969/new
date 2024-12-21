@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт гриля ассорти</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333;
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт гриль ассорти</h1>
+
+   
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=dcc0ca7c56f109c007d78a2655011771829285a72e916722-11540573-images-thumbs&n=13" alt="Гриль ассорти" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Гриль ассорти</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>2 стейка из говядины</li>
+                <li>2 куриные грудки</li>
+                <li>4 сосиски для гриля</li>
+                <li>1 баклажан</li>
+                <li>1 кабачок</li>
+                <li>1 сладкий перец</li>
+                <li>3 ст. ложки оливкового масла</li>
+                <li>Соль, перец, паприка и розмарин по вкусу</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. Нарежьте овощи крупными кусками. Смешайте их с 2 ст. ложками оливкового масла, солью и паприкой.</p>
+            <p>2. Замаринуйте мясо в оставшемся оливковом масле с солью, перцем и розмарином на 30 минут.</p>
+            <p>3. Разогрейте гриль. Обжарьте мясо, курицу и сосиски до готовности, переворачивая каждые 2-3 минуты.</p>
+            <p>4. Обжарьте овощи на гриле до появления золотистой корочки.</p>
+            <p>5. Подавайте мясо и овощи вместе, украсив свежей зеленью.</p>
+        </div>
+    </div>
+</body>
+</html>

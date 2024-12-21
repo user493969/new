@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт рыбного филе</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333; 
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт рыбного филе</h1>
+
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=b3d4c930a8a85a7c3196d34aec8df9a9ddbc0c2c-5244772-images-thumbs&n=13" alt="Рыбное филе" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Рыбное филе</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>2 куска филе белой рыбы (треска, хек, минтай)</li>
+                <li>2 ст. ложки растительного масла</li>
+                <li>1 лимон</li>
+                <li>Соль и черный перец по вкусу</li>
+                <li>1 ч. ложка сушеных трав (тимьян, розмарин или укроп)</li>
+                <li>30 г сливочного масла</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. Промойте и обсушите рыбное филе бумажным полотенцем. Посолите и поперчите с обеих сторон.</p>
+            <p>2. Нагрейте сковороду на среднем огне, добавьте растительное масло.</p>
+            <p>3. Обжарьте рыбу 3–4 минуты с одной стороны до золотистой корочки, затем переверните.</p>
+            <p>4. Добавьте сливочное масло и сушеные травы. Поливайте рыбу растопленным маслом во время обжарки.</p>
+            <p>5. Снимите рыбу со сковороды и выложите на тарелку. Сбрызните свежевыжатым лимонным соком.</p>
+            <p>6. Подавайте с гарниром из свежих овощей или риса.</p>
+        </div>
+    </div>
+</body>
+</html>

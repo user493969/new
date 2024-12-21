@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт супа-пюре</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333;
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт супа-пюре</h1>
+
+   
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=fb6df276b283c5ce5de83fd258148018e8cab41e-10653212-images-thumbs&n=13" alt="Суп-пюре" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Суп-пюре</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>500 г картофеля</li>
+                <li>200 г моркови</li>
+                <li>1 луковица</li>
+                <li>1 зубчик чеснока</li>
+                <li>500 мл овощного или куриного бульона</li>
+                <li>100 мл сливок (10–20%)</li>
+                <li>соль и перец по вкусу</li>
+                <li>оливковое масло</li>
+                <li>сухарики или зелень для подачи</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. Очистите картофель, морковь, лук и чеснок. Нарежьте овощи крупными кусками.</p>
+            <p>2. В кастрюле разогрейте оливковое масло, обжарьте лук и чеснок до мягкости.</p>
+            <p>3. Добавьте картофель и морковь, залейте овощным или куриным бульоном. Варите до мягкости овощей (примерно 20 минут).</p>
+            <p>4. Используя погружной блендер, измельчите суп до состояния пюре.</p>
+            <p>5. Добавьте сливки, посолите и поперчите по вкусу. Перемешайте и доведите до кипения.</p>
+            <p>6. Подавайте суп-пюре горячим, украсив зеленью или сухариками.</p>
+        </div>
+    </div>
+</body>
+</html>

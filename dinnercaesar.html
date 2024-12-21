@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт салата Цезарь</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500;
+            color: #333;
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт салата Цезарь</h1>
+
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=b3d4c930a8a85a7c3196d34aec8df9a9ddbc0c2c-5244772-images-thumbs&n=13" alt="Салат Цезарь" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Салат Цезарь</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>200 г куриного филе</li>
+                <li>1 кочан салата ромэн</li>
+                <li>50 г тертого пармезана</li>
+                <li>100 г сухариков</li>
+                <li>2 яйца</li>
+                <li>3 ст. ложки оливкового масла</li>
+                <li>1 зубчик чеснока</li>
+                <li>2 ч. ложки горчицы</li>
+                <li>1 ч. ложка лимонного сока</li>
+                <li>соль и черный перец по вкусу</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. Обжарьте куриное филе до готовности, посолите и поперчите. Остудите и нарежьте на полоски.</p>
+            <p>2. Приготовьте соус: смешайте горчицу, лимонный сок, оливковое масло, измельченный чеснок и слегка взбитые яйца.</p>
+            <p>3. Выложите листья салата на тарелку, сверху добавьте курицу, сухарики и пармезан.</p>
+            <p>4. Полейте салат соусом перед подачей.</p>
+        </div>
+    </div>
+</body>
+</html>

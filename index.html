@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрация Меню</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333; 
+        }
+        header {
+            background: #0e0e0e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav a {
+            color: #d1caca;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #f4a261;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .menu-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .menu-item {
+            background:whitesmoke;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .menu-item h3 {
+            margin: 1rem 0 0.5rem;
+            color: #333;
+        }
+        .menu-item p {
+            color: #555;
+        }
+        .menu-item .price {
+            color: #e76f51;
+            font-weight: bold;
+        }
+        footer {
+            background: #333;
+            color:white;
+            text-align: center;
+            padding: 1rem;
+        }
+        footer a {
+            color: #f4a261;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .menu-item {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#breakfast">Завтрак</a>
+            <a href="#lunch">Обед</a>
+            <a href="#dinner">Ужин</a>
+            <a href="#about">О нас</a>
+        </nav>
+    </header>
+
+    <section id="breakfast">
+        <h2 class="section-title">Завтрак</h2>
+    
+        <div class="menu-section">
+            <div class="menu-item">
+                <a href="breakfastmeal.html">
+                    <img src="https://static.1000.menu/img/content/36053/ovsyanaya-kasha-s-fruktami_1561335424_1_max.jpg" alt="Овсянка с фруктами">
+                </a>
+                <h3>Овсянка с фруктами</h3>
+                <p>Сытный и полезный завтрак.</p>
+                <p class="price">150som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Овсянка с фруктами">
+                    <input type="hidden" name="price" value="150som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="breakfasteggs.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=581cbcb042fab57736845c922645aca100947bfd-4092686-images-thumbs&n=13" alt="Яичница с беконом">
+                </a>
+                <h3>Яичница с говядиной</h3>
+                <p>Классика для начала дня.</p>
+                <p class="price">200som</p>
+               
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Яичница с говядиной">
+                    <input type="hidden" name="price" value="200som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="breakfastpancakes.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=4346bd76b591785fcfe17b2787300c561c7b1777-2417823-images-thumbs&n=13" alt="Блины с вареньем">
+                </a>
+                <h3>Блины с вареньем</h3>
+                <p>Сладкий завтрак для гурманов.</p>
+                <p class="price">180som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Блины с вареньем">
+                    <input type="hidden" name="price" value="180som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="tost.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=58794a5cda52f950a1d11a7d27f5c46ea6bd5f06-11547894-images-thumbs&n=13" alt="Тост с авокадо">
+                </a>
+                <h3>Тост с авокадо</h3>
+                <p>Современный и полезный завтрак.</p>
+                <p class="price">250som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Тост с авокадо">
+                    <input type="hidden" name="price" value="250som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="smuzi.HTML">
+                    <img src="https://avatars.mds.yandex.net/i?id=85361e4b98503cd7c40ea6d9ecd03e04-5284012-images-thumbs&n=13" alt="Смузи">
+                </a>
+                <h3>Смузи</h3>
+                <p>Фруктовый заряд энергии.</p>
+                <p class="price">200som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Смузи">
+                    <input type="hidden" name="price" value="200som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="yogrut.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=2a08b5cdf577a6083e9d09a85ad9b2e825636b69-8312878-images-thumbs&n=13" alt="Йогурт с мюсли">
+                </a>
+                <h3>Йогурт с мюсли</h3>
+                <p>Легкий и питательный завтрак.</p>
+                <p class="price">170som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Йогурт с мюсли">
+                    <input type="hidden" name="price" value="170som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="lunch">
+        <h2 class="section-title">Обед</h2>
+        <div class="menu-section">
+            <div class="menu-item">
+                <a href="borcht.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=a1f69c8756b211b7e5401ffec7b42479aeafe11a-9093415-images-thumbs&n=13" alt="Борщ">
+                </a>
+                <h3>Борщ</h3>
+                <p>Традиционный русский суп.</p>
+                <p class="price">250som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Борщ">
+                    <input type="hidden" name="price" value="250som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="cotlet.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=78b333e4eeab0eb90d846653b0e8f261296e1c42-10448002-images-thumbs&n=13" alt="Котлеты с пюре">
+                </a>
+                <h3>Котлеты с пюре</h3>
+                <p>Домашняя кухня на обед.</p>
+                <p class="price">300som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Котлеты с пюре">
+                    <input type="hidden" name="price" value="300som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="salad.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=e8e37385ee36400781d64fb43e1a6923b479839b-8343045-images-thumbs&n=13" alt="Овощной салат">
+                </a>
+                <h3>Овощной салат</h3>
+                <p>Свежий и хрустящий.</p>
+                <p class="price">200som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Овощной салат">
+                    <input type="hidden" name="price" value="200som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="lunchpasta.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=45b3dbd7f44a55f40c6f101ad466a125d1b06e913bb10584-13734741-images-thumbs&n=13" alt="Паста карбонара">
+                </a>
+                <h3>Паста карбонара</h3>
+                <p>Итальянская классика.</p>
+                <p class="price">350som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Паста карбонара">
+                    <input type="hidden" name="price" value="350som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="lunchsteak.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=23802de5489a93f138c6b835def6b816c4611b4f-4576286-images-thumbs&n=13" alt="Стейк с соусом">
+                </a>
+                <h3>Стейк с соусом</h3>
+                <p>Сочное мясо для обеда.</p>
+                <p class="price">500som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Стейк с соусом">
+                    <input type="hidden" name="price" value="500som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="lunchsoup.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=87bb61877bf5974e79c489743db12e9bb65a0ea4-4390495-images-thumbs&n=13" alt="Суп пюре">
+                </a>
+                <h3>Суп пюре</h3>
+                <p>Нежный кремовый суп.</p>
+                <p class="price">300som</p>
+               
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Суп пюре">
+                    <input type="hidden" name="price" value="300som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="dinner">
+        <h2 class="section-title">Ужин</h2>
+        <div class="menu-section">
+            <div class="menu-item">
+                <a href="dinnerfish.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=7476206ab6b55a6194f425408d51418106e8dc44-11254239-images-thumbs&n=13" alt="Рыбное филе с овощами">
+                </a>
+                <h3>Рыбное филе с овощами</h3>
+                <p>Легкий и вкусный ужин.</p>
+                <p class="price">350som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Рыбное филе с овощами">
+                    <input type="hidden" name="price" value="350som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="dinnercaesar.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=dd50c06b876f740847a503fa79b73fde2afcd898-9065994-images-thumbs&n=13" alt="Салат Цезарь">
+                </a>
+                <h3>Салат Цезарь</h3>
+                <p>Свежий и полезный ужин.</p>
+                <p class="price">300som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Салат Цезарь">
+                    <input type="hidden" name="price" value="300som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="dinnerpizza.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=c9b4f171c1ca774d7336a4405bcc96fd47f4968e-7887771-images-thumbs&n=13" alt="Пицца Маргарита">
+                </a>
+                <h3>Пицца Маргарита</h3>
+                <p>Классическая пицца с сыром.</p>
+                <p class="price">400som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Пицца Маргарита">
+                    <input type="hidden" name="price" value="400som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="dinnergrill.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=9a91fb4d7b2514547dd2f8e6631248c61934d321-12762283-images-thumbs&n=13" alt="Гриль микс">
+                </a>
+                <h3>Гриль микс</h3>
+                <p>Ассорти на гриле для гурманов.</p>
+                <p class="price">550som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Гриль микс">
+                    <input type="hidden" name="price" value="550som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="dinnerrisotto.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=6572b323eaae674156d5c0ac5252ce93-4376415-images-thumbs&n=13" alt="Ризотто с грибами">
+                </a>
+                <h3>Ризотто с грибами</h3>
+                <p>Нежное блюдо для ужина.</p>
+                <p class="price">400som</p>
+               
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Ризотто с грибами">
+                    <input type="hidden" name="price" value="400som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+            <div class="menu-item">
+                <a href="dinnershrimp.html">
+                    <img src="https://avatars.mds.yandex.net/i?id=a1be3fbef8d8aeda0b18e3a20a103184fb59d6b2-9853960-images-thumbs&n=13" alt="Креветки с чесночным соусом">
+                </a>
+                <h3>Креветки с чесночным соусом</h3>
+                <p>Морепродукты с изюминкой.</p>
+                <p class="price">450som</p>
+                
+                <form action="order.html" method="GET">
+                    <input type="hidden" name="item" value="Креветки с чесночным соусом">
+                    <input type="hidden" name="price" value="450som">
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="about">
+        <h2 class="section-title">О нас</h2>
+        <p>Мы предлагаем вкусные блюда на любой вкус. Используем только свежие и качественные продукты, чтобы радовать наших гостей каждый день.</p>
+        <p>Контакты:</p>
+        <p>Телефон: +996 702 777 005</p>
+        <p>Инстаграм: <a href="https://instagram.com/yourrestaurant" target="_blank">@Jazz</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Демонстрация Меню. Все права защищены.</p>
+    </footer>
+    
+</body>
+</html>

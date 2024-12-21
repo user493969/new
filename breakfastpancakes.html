@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты блинов с вареньем</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        
+        .recipe {
+            border: 1px solid blue;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепты блинов с вареньем</h1>
+
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=8928650d22fb751c64d9fcc022a9de104f9abe01b8021d64-5569020-images-thumbs&n=13" alt="Блины с вареньем" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Блины с вареньем</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>мука</li>
+                <li>молоко</li>
+                <li>яйцо</li>
+                <li>сахар</li>
+                <li>разрыхлитель теста</li>
+                <li>варенье (по выбору)</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Смешайте муку, молоко, яйца, сахар и разрыхлитель до получения однородного теста. Жарьте блины на сковороде с обеих сторон до золотистой корочки. Подавайте с вареньем.</p>
+        </div>
+    </div>
+
+    <div class="recipe">
+        <div class="recipe-text">
+            <h2>Блины с творогом и ягодами</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>мука</li>
+                <li>молоко</li>
+                <li>яйцо</li>
+                <li>творог</li>
+                <li>свежие ягоды</li>
+                <li>сахар</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Смешайте ингредиенты для теста и обжарьте блины. Заверните в блины творог и ягоды, посыпьте сахаром и подавайте.</p>
+        </div>
+        <img src="https://avatars.mds.yandex.net/i?id=ddfe380ce242441b03dbe3194ea176d64918880f-5597410-images-thumbs&n=13" alt="Блины с творогом и ягодами" class="main">
+    </div>
+
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=797d26595081c215ee680a2060297a8665a65b81-10414202-images-thumbs&n=13" alt="Блины с сиропом" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side3_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side3_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Блины с сиропом</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>мука</li>
+                <li>молоко</li>
+                <li>яйцо</li>
+                <li>сахар</li>
+                <li>сироп (кленовый, фруктовый и т. д.)</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Приготовьте тесто и обжарьте блины. Подавайте с сиропом по выбору.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт пиццы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333; 
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт пиццы</h1>
+
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=7302cefa9b6b77d6f810b78731e78d1d2c9b3027-12143639-images-thumbs&n=13" alt="Пицца" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Пицца</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>250 г муки</li>
+                <li>150 мл воды</li>
+                <li>1 ч. ложка сухих дрожжей</li>
+                <li>1 ст. ложка оливкового масла</li>
+                <li>щепотка соли</li>
+                <li>100 мл томатного соуса</li>
+                <li>150 г тертого сыра моцарелла</li>
+                <li>любимые начинки (пепперони, грибы, оливки, базилик)</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. В миске смешайте муку, дрожжи, воду, оливковое масло и соль. Замесите тесто.</p>
+            <p>2. Накройте тесто и оставьте его на 1 час для подъема.</p>
+            <p>3. Раскатайте тесто в круглый пласт и выложите его на противень, застеленный пергаментом.</p>
+            <p>4. Намажьте основу томатным соусом, посыпьте тертым сыром и добавьте начинку по вкусу.</p>
+            <p>5. Выпекайте пиццу в разогретой до 220°C духовке 10–15 минут до золотистой корочки.</p>
+            <p>6. Подавайте горячей, украсив свежим базиликом.</p>
+        </div>
+    </div>
+</body>
+</html>

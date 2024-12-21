@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт борща</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333; 
+        }
+      
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт борща</h1>
+
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=2170e3135dcc7bc13009d124319d2ae97dd12357-5876806-images-thumbs&n=13" alt="Борщ" class="main">
+        <div class="recipe-text">
+            <h2>Борщ</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>500 г свеклы</li>
+                <li>300 г капусты</li>
+                <li>2 картофелины</li>
+                <li>2 моркови</li>
+                <li>1 луковица</li>
+                <li>400 г говядины или свинины</li>
+                <li>2 ст. ложки томатной пасты</li>
+                <li>3 зубчика чеснока</li>
+                <li>соль, перец, лавровый лист</li>
+                <li>зелень для подачи</li>
+                <li>сметана для подачи</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. Отварите мясо в 2 литрах воды с добавлением соли и лаврового листа. Выньте мясо, нарежьте и верните в бульон.</p>
+            <p>2. Добавьте нарезанный картофель, натертую свеклу и морковь в бульон.</p>
+            <p>3. Пассеруйте лук с томатной пастой и добавьте в кастрюлю. Введите нарезанную капусту.</p>
+            <p>4. Варите борщ до готовности. Подавайте с чесноком, зеленью и сметаной.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>

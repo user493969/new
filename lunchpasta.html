@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт пасты Карбонара</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333; 
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт пасты Карбонара</h1>
+
+   
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=fa76e034405fd241c712c4df42529bd2baf8806a-9461935-images-thumbs&n=13" alt="Паста Карбонара" class="main">
+        <div class="side-image left" style="background-image: url('https://avatars.mds.yandex.net/i?id=9ab6aecaee108bc4201b4a1b6f18403d2b2410a0ef7cb8ff-12994680-images-thumbs&n=13'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Паста Карбонара</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>200 г пасты (спагетти или фетучини)</li>
+                <li>150 г панчетты или гуанчале (итальянский бекон)</li>
+                <li>2 яйца</li>
+                <li>50 г тертого пармезана</li>
+                <li>50 г тертого пекорино</li>
+                <li>1 зубчик чеснока</li>
+                <li>соль и черный перец по вкусу</li>
+                <li>оливковое масло</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. Отварите пасту в подсоленной воде до состояния "аль денте", следуя инструкциям на упаковке.</p>
+            <p>2. Пока паста варится, нарежьте панчетту или гуанчале маленькими кубиками и обжарьте на сковороде с оливковым маслом и целым зубчиком чеснока до хрустящей корочки.</p>
+            <p>3. В миске взбейте яйца с тертыми сырами (пармезан и пекорино), добавьте немного черного перца.</p>
+            <p>4. Когда паста готова, слейте воду, оставив немного (приблизительно 1/2 стакана). Добавьте пасту на сковороду с панчеттой, уберите с огня.</p>
+            <p>5. Быстро перемешайте пасту с яичной смесью, добавьте немного горячей воды от пасты, чтобы образовался кремовый соус.</p>
+            <p>6. Подавайте немедленно, посыпав еще пармезаном и черным перцем по вкусу.</p>
+        </div>
+    </div>
+</body>
+</html>

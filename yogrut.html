@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты йогурта с мюсли</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .recipe {
+            border: 1px solid yellow;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепты йогурта с мюсли</h1>
+
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=4522eb39d2be9ed7fc17bb6d2dab4a2f49204808-12475759-images-thumbs&n=13" alt="Йогурт с мюсли" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Йогурт с мюсли</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>1 стакан натурального йогурта</li>
+                <li>1/2 стакана мюсли</li>
+                <li>1/2 стакана свежих ягод (клубника, черника, малина)</li>
+                <li>1 ст. ложка меда</li>
+                <li>по желанию: орехи, семена</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>В чашку или миску выложите йогурт, добавьте мюсли и ягоды. Полейте медом и посыпьте орехами или семенами по вкусу. Перемешайте и подавайте.</p>
+        </div>
+    </div>
+
+   
+    <div class="recipe">
+        <div class="recipe-text">
+            <h2>Йогурт с мюсли и бананом</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>1 стакан йогурта</li>
+                <li>1/2 стакана мюсли</li>
+                <li>1 банан, нарезанный</li>
+                <li>1 ст. ложка меда</li>
+                <li>по желанию: кокосовая стружка</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Смешайте йогурт с мюсли и нарезанным бананом. Полейте медом и посыпьте кокосовой стружкой. Подавайте сразу.</p>
+        </div>
+        <img src="https://avatars.mds.yandex.net/i?id=b0ee79eb3941e11eaa82891a2c356f4da90e627c-8238279-images-thumbs&n=13" alt="Йогурт с мюсли и бананом" class="main">
+    </div>
+
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=da2f4da8401fa285d5299a3bf2a52836059f7b95-4143805-images-thumbs&n=13" alt="Йогурт с фруктами и мюсли" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side3_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side3_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Йогурт с фруктами и мюсли</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>1 стакан йогурта</li>
+                <li>1/2 стакана мюсли</li>
+                <li>1/2 стакана нарезанных фруктов (яблоки, груши, киви)</li>
+                <li>1 ст. ложка меда</li>
+                <li>по желанию: семена чиа</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Смешайте йогурт с мюсли и добавьте нарезанные фрукты. Полейте медом и посыпьте семенами чиа. Перемешайте и подавайте.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>

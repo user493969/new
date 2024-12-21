@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт котлет с пюре</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #FFA500; 
+            color: #333; 
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            background-color: #FFF5E1; 
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепт котлет с пюре</h1>
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=87b0480cefaa643a63dbcefeb3cd3ff8f2deb817-9042901-images-thumbs&n=13" alt="Котлеты с пюре" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Котлеты с пюре</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>500 г фарша (свинина/говядина)</li>
+                <li>1 яйцо</li>
+                <li>2 ломтика хлеба</li>
+                <li>100 мл молока</li>
+                <li>1 луковица</li>
+                <li>соль и перец по вкусу</li>
+                <li>500 г картофеля</li>
+                <li>50 г сливочного масла</li>
+                <li>150 мл молока для пюре</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>1. Замочите хлеб в молоке, затем добавьте его к фаршу. Добавьте яйцо, натертую луковицу, соль и перец.</p>
+            <p>2. Сформируйте котлеты и обжарьте их до золотистой корочки с обеих сторон.</p>
+            <p>3. Отварите очищенный картофель до мягкости. Разомните его, добавив сливочное масло и теплое молоко.</p>
+            <p>4. Подавайте котлеты с пюре, украсьте зеленью.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>

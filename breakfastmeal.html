@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты овсянки с фруктами</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+     
+        
+        .carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+        }
+        .recipe {
+            border: 1px solid red;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепты овсянки с фруктами</h1>
+
+
+
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=27382f799588d383cb7e7fc813fd99b81f2209c7-10877381-images-thumbs&n=13" alt="Овсянка с бананами и медом" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Овсянка с бананами и медом</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>овсяные хлопья</li>
+                <li>молоко</li>
+                <li>банан</li>
+                <li>мед</li>
+                <li>щепотка корицы</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Вскипятите молоко, добавьте овсяные хлопья и готовьте до мягкости. Подавайте с нарезанным бананом, медом и корицей.</p>
+        </div>
+    </div>
+
+ 
+    <div class="recipe">
+        <div class="recipe-text">
+            <h2>Овсянка с ягодами и орехами</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>овсяные хлопья</li>
+                <li>молоко</li>
+                <li>смесь ягод (клубника, черника, малина)</li>
+                <li>грецкие орехи</li>
+                <li>кленовый сироп</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Сварите овсянку на молоке, добавьте ягоды и орехи, полейте кленовым сиропом.</p>
+        </div>
+        <img src="https://avatars.mds.yandex.net/i?id=93245fc1e2d7d5fdb9f88aaffd62160b4741a762-9293984-images-thumbs&n=13" alt="Овсянка с ягодами и орехами" class="main">
+    </div>
+
+
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=cfc2e89c1f63ce70f4d932c165f506b78aa9fc7e-11003961-images-thumbs&n=13" alt="Овсянка с яблоками и корицей" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side3_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side3_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Овсянка с яблоками и корицей</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>овсяные хлопья</li>
+                <li>яблоко</li>
+                <li>молоко</li>
+                <li>корица</li>
+                <li>сахар по вкусу</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Сварите овсянку и добавьте нарезанное яблоко, посыпьте корицей и сахаром.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>

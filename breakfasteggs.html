@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты овсянки с фруктами</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        
+        
+        
+        .recipe {
+            border: 1px solid green;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепты яичницы с беконом</h1>
+
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=989366e4cb0fb94ee48b3ea7a5de9582495ff8bb-5354373-images-thumbs&n=13" alt="Яичница с говядиной" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side1_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Яичница с говядиной</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>яйца</li>
+                <li>говядина</li>
+                <li>масло</li>
+                <li>соль и перец по вкусу</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Обжарьте говядину до хрустящей корочки. В отдельной сковороде разогрейте масло и жарьте яйца. Подавайте с говядиной, посолив и поперчив по вкусу.</p>
+        </div>
+    </div>
+
+  
+    <div class="recipe">
+        <div class="recipe-text">
+            <h2>Яичница с овощами</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>яйца</li>
+                <li>помидоры</li>
+                <li>перец</li>
+                <li>лук</li>
+                <li>соль и перец по вкусу</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Обжарьте овощи на сковороде до мягкости, затем добавьте яйца и готовьте до готовности. Подавайте с зеленью.</p>
+        </div>
+        <img src="https://avatars.mds.yandex.net/i?id=64f733dc0bcc02bcb17e320727eeaa389f09f0ad-10962086-images-thumbs&n=13" alt="Яичница с овощами" class="main">
+    </div>
+
+   
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=8afe5284e6db90787aadaff21ba148ca83b40127-10071889-images-thumbs&n=13" alt="Яичница с сыром" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side3_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side3_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Яичница с сыром</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>яйца</li>
+                <li>сыр (по вашему выбору)</li>
+                <li>масло</li>
+                <li>соль и перец по вкусу</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Разогрейте масло в сковороде, взбейте яйца и вылейте их на сковороду. Добавьте тертый сыр, перемешайте и готовьте до готовности. Подавайте горячим.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>

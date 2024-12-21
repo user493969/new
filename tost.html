@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты тостов с авокадо</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        
+        }
+        .recipe {
+            border: 1px solid yellow;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+        .recipe img.main {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 20px;
+        }
+        .recipe-text {
+            flex: 1;
+            text-align: center;
+        }
+        .side-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .side-image.left {
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-image.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рецепты тостов с авокадо</h1>
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=2bb45aae62e5aad92c479b9ff2801b8fe067ca93eb4ba72a-12420713-images-thumbs&n=13" alt="Тост с авокадо" class="main">
+        <div class="side-image left" style="background-image: url('https://avatars.mds.yandex.net/i?id=2bb45aae62e5aad92c479b9ff2801b8fe067ca93eb4ba72a-12420713-images-thumbs&n=13'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side1_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Тост с авокадо</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>хлеб (по вашему выбору)</li>
+                <li>авокадо</li>
+                <li>соль</li>
+                <li>перец</li>
+                <li>лимонный сок</li>
+                <li>по желанию: помидоры, яйцо, красный перец</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Обжарьте хлеб до золотистой корочки. Разомните авокадо с солью, перцем и лимонным соком, и распределите по хлебу. Подавайте с помидорами или яйцом по желанию.</p>
+        </div>
+    </div>
+
+    
+    <div class="recipe">
+        <div class="recipe-text">
+            <h2>Тост с авокадо и курицей</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>хлеб</li>
+                <li>авокадо</li>
+                <li>куриное филе</li>
+                <li>соль и перец</li>
+                <li>оливковое масло</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Обжарьте куриное филе и нарежьте его. Намажьте хлеб с авокадо и выложите сверху курицу. Подавайте с салатом.</p>
+        </div>
+        <img src="https://avatars.mds.yandex.net/i?id=531392bd980b432f8e586e883a019f97ed849211-9068533-images-thumbs&n=13" alt="Тост с авокадо и курицей" class="main">
+    </div>
+
+    
+    <div class="recipe">
+        <img src="https://avatars.mds.yandex.net/i?id=186cc9fa07c8696917fd1a7d034c54d32fe0ce8f-12569850-images-thumbs&n=13" alt="Тост с авокадо и сальсой" class="main">
+        <div class="side-image left" style="background-image: url('https://example.com/side3_left.jpg'); background-size: cover;"></div>
+        <div class="side-image right" style="background-image: url('https://example.com/side3_right.jpg'); background-size: cover;"></div>
+        <div class="recipe-text">
+            <h2>Тост с авокадо и сальсой</h2>
+            <h3>Ингредиенты:</h3>
+            <ul>
+                <li>хлеб</li>
+                <li>авокадо</li>
+                <li>сальса</li>
+                <li>соль и перец</li>
+                <li>по желанию: кинза</li>
+            </ul>
+            <h3>Инструкции:</h3>
+            <p>Намажьте хлеб с авокадо, добавьте сальсу и посолите по вкусу. Украсьте кинзой и подавайте с лимоном.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.opacity = 1;
+        }
+
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>
